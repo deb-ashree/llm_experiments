@@ -8,6 +8,8 @@ AudioExperiments/audio/text-audio.mp3
 AudioExperiments/text/audio-text.txt
 AudioExperiments/original_audio/received_audio.mp3
 AudioExperiments/.DS_Store
+AgentExperiments/.DS_Store
+VoiceBotExperiments/.DS_Store
 .DS_Store
 
 __pycache__/
