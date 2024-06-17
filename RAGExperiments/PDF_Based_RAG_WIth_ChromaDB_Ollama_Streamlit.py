@@ -172,4 +172,4 @@ else:
    st.write("Please upload a PDF file to start the chatbot")
 
 
-# Run the code with the following command - streamlit run app.py 
+# Run the code with the following command - streamlit run <filename>.py 
