@@ -2,8 +2,8 @@
 #pip uninstall openai-whisper
 #pip install git+https://github.com/openai/whisper.git
 
-##--- Reference from Youtube modified for Start and Stop of conversation ---##
 
+##--- Reference from Youtube modified for Start and Stop of conversation ---##
 import io, re, os, sys
 import streamlit as st
 import speech_recognition as sr

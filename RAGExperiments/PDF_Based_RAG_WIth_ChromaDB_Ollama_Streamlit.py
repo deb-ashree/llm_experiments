@@ -83,7 +83,7 @@ if 'chat_history' not in st.session_state:
    st.session_state.chat_history = []
 
 
-st.title("Chatbot - to talk to PDFs")
+st.title("Chat with PDFs")
 
 
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")

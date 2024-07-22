@@ -14,9 +14,6 @@ import os
 #----------------------------------
 # main.py (python example)
 
-import os
-from dotenv import load_dotenv
-
 from deepgram import (
     DeepgramClient,
     PrerecordedOptions,

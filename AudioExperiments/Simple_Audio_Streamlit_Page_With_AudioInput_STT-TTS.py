@@ -61,12 +61,10 @@ def sidebarBgColour(wch_colour):
     my_colour = f"<style> .stApp {{background-color: {wch_colour};}} </style>"
     st.sidebar(my_colour, unsafe_allow_html=True)
 
-#setBgImage("blue-violet-sidebar2.jpeg")  #NW
-#sidebarBgColour("light violet")
 st.sidebar.image("blue-violet-sidebar2.jpeg", use_column_width=True)
 
 if audio_bytes:
-    audio_file = open("original_audio/received_audio.mp3", "wb") 
+    audio_file = open(os.getcwd()+"/AudioExperiments/original_audio/received_audio.mp3", "wb") 
     audio_file.write(audio_bytes)
     ##st.audio(audio_bytes, format="audio/mp3")
     print(type(audio_file))
@@ -76,8 +74,8 @@ os.makedirs("audio",  exist_ok=True)
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
-text_file_path = os.path.join("AudioExperiments/text/", "audio-text.txt")
-created_audio_file_path = os.path.join("AudioExperiments/audio/", "text-audio.mp3")
+text_file_path = os.path.join(os.getcwd()+"/AudioExperiments/text/", "audio-text.txt")
+created_audio_file_path = os.path.join(os.getcwd()+"/AudioExperiments/audio/", "text-audio.mp3")
 
 def read_text():
     with open(text_file_path, 'r') as file:
