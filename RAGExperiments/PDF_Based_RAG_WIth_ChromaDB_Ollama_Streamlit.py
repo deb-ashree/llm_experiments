@@ -96,10 +96,10 @@ for message in st.session_state.chat_history:
 
 if uploaded_file is not None:
    st.text("File uploaded successfully")
-   if not os.path.exists('pdfFiles/' + uploaded_file.name):
+   if not os.path.exists('RAGExperiments/pdfFiles/' + uploaded_file.name):
        with st.status("Saving file..."):
            bytes_data = uploaded_file.read()
-           f = open('pdfFiles/' + uploaded_file.name, 'wb')
+           f = open('RAGExperiments/pdfFiles/' + uploaded_file.name, 'wb')
            f.write(bytes_data)
            f.close()
 
