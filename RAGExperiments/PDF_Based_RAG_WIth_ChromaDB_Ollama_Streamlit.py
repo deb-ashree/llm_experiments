@@ -32,8 +32,8 @@ if not os.path.exists('pdfFiles'):
    os.makedirs('pdfFiles')
 
 
-if not os.path.exists('vectorDB'):
-   os.makedirs('vectorDB')
+if not os.path.exists('RAGExperiments/vectorDB'):
+   os.makedirs('RAGExperiments/vectorDB')
 
 
 
@@ -66,7 +66,7 @@ if 'memory' not in st.session_state:
 
 
 if 'vectorstore' not in st.session_state:
-   st.session_state.vectorstore = Chroma(persist_directory='vectorDb',
+   st.session_state.vectorstore = Chroma(persist_directory='RAGExperiments/vectorDB',
                                            embedding_function=OllamaEmbeddings(base_url='http://localhost:11434',
                                            model="llama3")
                                            )
