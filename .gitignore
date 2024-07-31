@@ -13,6 +13,7 @@ AudioExperiments/.DS_Store
 AgentExperiments/.DS_Store
 VoiceBotExperiments/.DS_Store
 RagExperiments/.DS_Store
+RagExperiments/chromaDB
 .DS_Store
 #RagExperiments/vectorDB/*
 RagExperiments
