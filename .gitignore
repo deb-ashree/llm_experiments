@@ -14,9 +14,9 @@ AgentExperiments/.DS_Store
 VoiceBotExperiments/.DS_Store
 RagExperiments/.DS_Store
 RagExperiments/chromaDB
+RagExperiments/requirements.txt
 .DS_Store
 #RagExperiments/vectorDB/*
-RagExperiments
 __pycache__/
 *.py[cod]
 *$py.class
