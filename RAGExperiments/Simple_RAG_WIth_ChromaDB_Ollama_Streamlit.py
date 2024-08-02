@@ -1,5 +1,7 @@
 ##--- Reference : An Youtube video with some modifications ---##
 
+## --- run as - Streamlit run <filename>
+
 import streamlit as st
 import os
 import time
