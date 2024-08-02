@@ -28,8 +28,7 @@ llm_ollama = ChatOllama(                  ## Calling llama3.1
 )
 
 ef_openai = OpenAIEmbeddings()
-ef_llama31 = OllamaEmbeddings(base_url='http://localhost:11434',
-                                           model="llama3")                                           )
+ef_llama31 = OllamaEmbeddings(base_url="http://localhost:11434", model="llama3.1")                                         )
 
 # 1. Get a Data Loader
 
