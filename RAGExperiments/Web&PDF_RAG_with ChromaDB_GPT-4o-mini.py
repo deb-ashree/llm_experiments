@@ -10,7 +10,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
 from langchain_openai import ChatOpenAI
-from langchain_ollama import ChatOllama
+from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import RetrievalQA
@@ -28,6 +28,8 @@ llm_ollama = ChatOllama(                  ## Calling llama3.1
 )
 
 ef_openai = OpenAIEmbeddings()
+ef_llama31 = OllamaEmbeddings(base_url='http://localhost:11434',
+                                           model="llama3")                                           )
 
 # 1. Get a Data Loader
 
