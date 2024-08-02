@@ -1,9 +1,7 @@
 # pip install langchain langchainhub langchain_objectbox langchain_community
 #ollama pull llama3.1 -- for 8b model
 
-## References
-## Krish Naik - https://github.com/krishnaik06/Updated-Langchain/blob/main/openai/GPT4o_Lanchain_RAG.ipynb, https://www.youtube.com/watch?v=TcvI-Nnebow
-## https://github.com/NebeyouMusie/End-to-End-RAG-Project-using-ObjectBox-and-LangChain implemented on krish Naik's tutorials
+## References (with modifications) - https://github.com/krishnaik06/Updated-Langchain/blob/main/openai/GPT4o_Lanchain_RAG.ipynb
 
 from dotenv import load_dotenv
 from langchain_community.document_loaders import WebBaseLoader, PyPDFLoader
@@ -42,7 +40,7 @@ text_splitter = RecursiveCharacterTextSplitter()
 documents = text_splitter.split_documents(data)
 documents
 
-# 2. Convert data to Vector Database
+# 2. Add Web data to Vector Database
 
 # persist to disk
 vector = Chroma.from_documents(collection_name="test_chroma_db", documents=documents, embedding=ef_openai, persist_directory='RAGExperiments/chromaDB') 
@@ -72,7 +70,7 @@ if os.path.exists(path_to_pdfs):
             )
             pdf_splits.extend(text_splitter.split_documents(data))
 
-# 4. Convert data to Vector Database
+# 4. Add PDF data to Vector Database
 if pdf_splits is not []:
     vector.add_documents(pdf_splits,embedding=ef_openai)
 print(vector)
