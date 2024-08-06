@@ -20,9 +20,7 @@ client = OpenAI()
 
 afile = st.file_uploader("Upload Audio : ", type=["wav","mp3","m4a"])
 st.markdown(''' *:grey[You can find some samples to download here] https://pixabay.com/music/search/vocal%20samples/*''')
-print(afile)
 print(type(afile))
-st.audio(afile)
 
 text_file_path = os.path.join(parent_folder+"text/", "audio-text.txt")
 created_audio_file_path = os.path.join(parent_folder+"audio/", "text-audio.mp3")
@@ -48,11 +46,9 @@ def back_to_audio():
 
 if st.sidebar.button("Transcribe audio to text"):
     content = transcribe_audio()
-    print("Content :\n"+content)
     st.text_area("Audio Text ", content, height=500)
     with open(text_file_path, 'w') as file:
         file.writelines(content) 
-        print(content)
     st.markdown("Convert audio to text done")
 
 if st.sidebar.button("Convert text to audio"):
